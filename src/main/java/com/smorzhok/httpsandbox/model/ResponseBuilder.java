@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.stream.Collectors;
@@ -31,11 +30,6 @@ public class ResponseBuilder {
 
     public static ResponseBuilder instance() {
         return new ResponseBuilder();
-    }
-
-    public ResponseBuilder cookies(Map<String, String> values) {
-        this.cookies.putAll(Collections.unmodifiableMap(values));
-        return this;
     }
 
     public ResponseBuilder cookies(Cookie[] cookies) {
